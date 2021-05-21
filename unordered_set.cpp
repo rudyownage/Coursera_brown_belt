@@ -32,8 +32,8 @@ public:
         return data[GetBucketIndex(value)];
     }
 private:
-    size_t GetBucketIndex(const Type& value) const{
-        return hasher_(value) % num_b;
+    size_t GetBucketIndex(const Type& value) const {
+        return hasher_(value) % num_b; 
     }
     vector<BucketList> data;
     size_t num_b;
